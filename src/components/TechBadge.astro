@@ -1,0 +1,20 @@
+---
+type TechBadgeProps = {
+  name: string
+  imgSrc: string
+  altSrc: string
+  height?: string
+  width?: string
+}
+
+const { name, imgSrc, altSrc, height = 60, width = 60 } = Astro.props as TechBadgeProps
+---
+
+<div class='flex items-center gap-4 duration-200 ease-in-out hover:scale-105'>
+  <div
+    class=`flex h-[${height}px] w-[${width}px] items-center justify-center`
+  >
+    <img src={imgSrc} alt={altSrc} height={height} width={width} />
+  </div>
+  <h3 class='text-[14px] md:text-[16px]'>{name}</h3>
+</div>

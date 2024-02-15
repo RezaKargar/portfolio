@@ -1,0 +1,25 @@
+---
+import Navbar from '@components/Navbar.astro'
+import Footer from '@components/Footer.astro'
+import Head from '@components/Head.astro'
+
+export interface Props {
+  title: string
+  description?: string
+  withLinksInFooter?: boolean
+}
+
+const { title, description = 'Personal website of Reza Kargar', withLinksInFooter = true } =
+  Astro.props
+---
+
+<html lang='en'>
+  <head>
+    <Head title={title} description={description} />
+  </head>
+  <Navbar />
+  <body>
+    <slot />
+  </body>
+  <Footer showLink={withLinksInFooter} />
+</html>

@@ -1,0 +1,46 @@
+---
+import Layout from '@layouts/Layout.astro'
+import { technologies } from '@utils/data'
+import TechBadge from '@components/TechBadge.astro'
+
+type TechBadgeProps = {
+  name: string
+  imgSrc: string
+  altSrc: string
+  height?: string
+  width?: string
+}
+---
+
+<Layout
+  title='Reza Kargar | Socials'
+  description='Links for social media of Reza Kargar'
+>
+  <main class='mb-14 md:mb-28 mt-3'>
+    <div class='my-10 flex items-center justify-center md:my-8'>
+      <div class='w-9/12 text-white md:w-[740px]'>
+        <h2 class='text-3xl font-bold'>Technologies</h2>
+        <p class='mt-4 text-left'>
+          I like playing around and learning new programming languages,
+          frameworks and libraries. These are the technologies that I love
+          working with:
+        </p>
+        <div
+          class='mt-10 grid grid-cols-2 gap-y-5 md:grid-cols-3 md:gap-x-4 md:gap-y-8'
+        >
+          {
+            technologies.map((tech: TechBadgeProps, i) => (
+              <a
+                class={`cursor-pointer text-gray-300 flex md:justify-start ${i % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+                href="#"
+                aria-label=""
+              >
+                <TechBadge {...tech} />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

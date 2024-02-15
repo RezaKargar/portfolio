@@ -1,0 +1,4 @@
+User-agent: Googlebot-Image
+Disallow: /assets/
+
+Sitemap: https://www.rezakargar.ir/sitemap-index.xml
