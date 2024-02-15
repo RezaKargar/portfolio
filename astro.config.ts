@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config'
 import tailwind from '@astrojs/tailwind'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
-import vercel from '@astrojs/vercel/serverless'
 import prefetch from '@astrojs/prefetch'
 
 import expressiveCode from 'astro-expressive-code'
@@ -34,8 +33,5 @@ export default defineConfig({
     mdx(),
   ],
   site: 'https://rezakargar.ir/',
-  output: 'hybrid',
-  adapter: vercel({
-    edgeMiddleware: true,
-  }),
+  output: 'static',
 })
