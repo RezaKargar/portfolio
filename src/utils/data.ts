@@ -70,7 +70,7 @@ const socials = [
   },
   {
     name: 'Telegram',
-    url: 'https://www.telegram.com/RezaKargar',
+    url: 'https://t.me/RezaKargar',
     imgSrc: 'telegram',
     ariaLabel: 'Reza Kargar Telegram',
   },
