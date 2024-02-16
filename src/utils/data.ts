@@ -76,7 +76,7 @@ const socials = [
   },
   {
     name: 'Twitter',
-    url: 'https://twitter.com/soysarcasme',
+    url: 'https://twitter.com/RezaKargar___',
     imgSrc: 'twitter',
     ariaLabel: 'Reza Kargar Twitter Profile',
   },
